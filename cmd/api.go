@@ -29,8 +29,6 @@ func (app *application) mount() http.Handler {
 		w.Write([]byte("Health check successful"))
 	})
 
-	// http.ListenAndServe(":3333", r)
-
 	return r
 }
 
