@@ -47,8 +47,8 @@ func (app *application) run(h http.Handler) error {
 	return srv.ListenAndServe()
 }
 
-type application struct {
-	config config
+type dbConfig struct {
+	dsn string
 }
 
 type config struct {
@@ -56,6 +56,6 @@ type config struct {
 	db      dbConfig
 }
 
-type dbConfig struct {
-	dsn string
+type application struct {
+	config config
 }
